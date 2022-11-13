@@ -1,0 +1,22 @@
+<!-- interpolation  -->
+<!-- directive:fonctionnalité predefinie :ngfor/ngif -->
+<table border="1">
+    <tr>
+        <th>reference</th>
+        <th>Titre</th>
+        <th>Entreprise</th>
+        <th>etat</th>
+        <!-- -->
+
+    </tr>
+    <tr *ngFor="let p of EmploiList">
+        <td>{{p.reference}}</td>
+        <td>{{p.titre}}</td>
+        <td>{{p.entreprise}}</td>
+        <td>{{p.etat}}</td>
+        <td><button  [disabled]="p.etat==false">Postuler</button></td>
+    </tr>
+   <!-- <tr>
+        <td> <button (click)="calculer()"> poste dispo</button> </td>
+    </tr>  --> 
+</table>
